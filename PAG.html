@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GameClick Store</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#12002b;
+    color:white;
+}
+
+/* TOP BAR */
+
+.topbar{
+    background:black;
+    padding:12px 30px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    font-size:14px;
+}
+
+.topbar a{
+    color:white;
+    text-decoration:none;
+    margin-right:15px;
+    font-weight:bold;
+}
+
+/* HEADER */
+
+header{
+    background:#0094ff;
+    padding:20px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo{
+    font-size:35px;
+    font-weight:bold;
+    color:orange;
+}
+
+.search{
+    display:flex;
+    gap:10px;
+}
+
+.search input{
+    padding:10px;
+    width:250px;
+    border:none;
+    border-radius:20px;
+}
+
+.search button{
+    padding:10px 20px;
+    border:none;
+    background:#333;
+    color:white;
+    border-radius:20px;
+    cursor:pointer;
+}
+
+/* MAIN */
+
+.container{
+    display:flex;
+    padding:15px;
+    gap:15px;
+}
+
+/* SIDEBAR */
+
+.sidebar{
+    width:250px;
+    background:#1d1d1d;
+}
+
+.sidebar h2{
+    background:#2d2d2d;
+    padding:15px;
+    font-size:20px;
+}
+
+.sidebar ul{
+    list-style:none;
+}
+
+.sidebar ul li{
+    padding:15px;
+    border-bottom:1px solid #444;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.sidebar ul li:hover{
+    background:#8a00ff;
+}
+
+/* CONTENT */
+
+.content{
+    flex:1;
+}
+
+/* BANNER */
+
+.banner{
+    height:250px;
+    background:url('https://user-images.githubusercontent.com/66705822/100891556-211aa600-3498-11eb-84d7-7e9d43c8331c.jpg') center/cover;
+    border-radius:10px;
+    display:flex;
+    align-items:above;
+    padding-left:40px;
+    margin-bottom:20px;
+}
+
+.banner h1{
+    font-size:45px;
+    color:white;
+    text-shadow:3px 3px 10px black;
+}
+
+/* PRODUCTS */
+
+.products{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:15px;
+}
+
+.product{
+    background:white;
+    color:black;
+    border-radius:10px;
+    overflow:hidden;
+    text-align:center;
+    transition:0.3s;
+}
+
+.product:hover{
+    transform:scale(1.03);
+}
+
+.product img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+}
+
+.product h3{
+    margin:15px 0 10px;
+}
+
+.price{
+    color:green;
+    font-size:22px;
+    margin-bottom:10px;
+}
+
+.product button{
+    margin-bottom:15px;
+    padding:10px 20px;
+    border:none;
+    background:#8a00ff;
+    color:white;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+/* FOOTER */
+
+footer{
+    background:black;
+    margin-top:30px;
+    padding:30px;
+    display:flex;
+    justify-content:space-between;
+    flex-wrap:wrap;
+}
+
+footer div{
+    margin:10px;
+}
+
+footer h3{
+    margin-bottom:15px;
+    color:#00aeff;
+}
+
+footer p{
+    margin-bottom:10px;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- TOPBAR -->
+
+<div class="topbar">
+    <div>
+        <a href="#">Inicio</a>
+        <a href="#">Productos</a>
+        <a href="#">Ayuda</a>
+        <a href="#">Contacto</a>
+    </div>
+
+    <div>
+        <a href="#">Iniciar sesión</a>
+        <a href="#">Registrarse</a>
+    </div>
+</div>
+
+<!-- HEADER -->
+
+<header>
+
+    <div class="logo">
+        GAMECLICK
+    </div>
+
+    <div class="search">
+        <input type="text" placeholder="Buscar productos">
+        <button>Buscar</button>
+    </div>
+
+</header>
+
+<!-- MAIN -->
+
+<div class="container">
+
+    <!-- SIDEBAR -->
+
+    <aside class="sidebar">
+
+        <h2>Categorías</h2>
+
+        <ul>
+            <li>🎧 Accesorios</li>
+            <li>🔊 Audio</li>
+            <li>🖥️ Computadoras</li>
+            <li>⌨️ Componentes</li>
+            <li>🖱️ Monitores</li>
+            <li>💾 Almacenamiento</li>
+        </ul>
+
+    </aside>
+
+    <!-- CONTENT -->
+
+    <main class="content">
+
+        <!-- BANNER -->
+
+        <div class="banner">
+            <h1>Lo Mejor en Tecnología Gamer</h1>
+        </div>
+
+        <!-- PRODUCTS -->
+
+        <section class="products">
+
+            <div class="product">
+                <img src="https://www.steren.com.mx/media/catalog/product/cache/bb0cad18a6adb5d17b0efd58f4201a2f/image/2358075c9/monitor-de-24-ips.jpg">
+                <h3>Monitor Gamer</h3>
+                <p class="price">$2,500 MXN</p>
+                <button>Comprar</button>
+            </div>
+
+            <div class="product">
+                <img src="https://grupodecme.com/cdn/shop/files/5ce2970b-5150-4634-8c4a-43b61960088e_700x700.jpg?v=1735255658">
+                <h3>Audífonos RGB</h3>
+                <p class="price">$899 MXN</p>
+                <button>Comprar</button>
+            </div>
+
+            <div class="product">
+                <img src="https://http2.mlstatic.com/D_NQ_NP_2X_845768-MLM108657076265_032026-F-teclado-mecanico-hyperx-alloy-origins-60-rgb.webp">
+                <h3>Teclado Mecánico</h3>
+                <p class="price">$1,500 MXN</p>
+                <button>Comprar</button>
+            </div>
+
+            <div class="product">
+                <img src="https://www.cyberpuerta.mx/img/product/S/CP-ALCHEMYFORCE-AFA20-20240410-4-4-7955d6.png">
+                <h3>PC Gamer RGB</h3>
+                <p class="price">$45,000 MXN</p>
+                <button>Comprar</button>
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+<!-- FOOTER -->
+
+<footer>
+
+    <div>
+        <h3>Menú</h3>
+        <p>Inicio</p>
+        <p>Carrito</p>
+        <p>Nosotros</p>
+        <p>Contacto</p>
+    </div>
+
+    <div>
+        <h3>Redes Sociales</h3>
+        <p>Facebook</p>
+        <p>Instagram</p>
+        <p>X / Twitter</p>
+    </div>
+
+    <div>
+        <h3>GAMECLICK</h3>
+        <p>Tu tienda gamer favorita</p>
+    </div>
+
+</footer>
+
+</body>
+</html>
